@@ -86,3 +86,6 @@ Session.vim
 .netrwhist
 *~
 
+Nature samples alias
+out/20260309.164601 - data - nature - x108.z100.uniform_signed.y64.b64/FLAGS.json
+*.json

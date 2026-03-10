@@ -67,10 +67,7 @@ def main(_):
   if not os.path.exists(FLAGS.sample_dir): os.makedirs(FLAGS.sample_dir)
 
   with open(os.path.join(FLAGS.out_dir, 'FLAGS.json'), 'w') as f:
-    flags_dict = {k:FLAGS[k].value for k in FLAGS}
-    json.dump(flags_dict, f, indent=4, sort_keys=True, ensure_ascii=False)
-  
-
+    json.dump(FLAGS.__flags, f, indent=4, sort_keys=True, ensure_ascii=False)
   #gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=0.333)
   run_config = tf.ConfigProto()
   run_config.gpu_options.allow_growth=True
